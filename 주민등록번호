@@ -1,0 +1,16 @@
+#num="000302-2567890"
+while(True):
+  num=input("주민번호를 입력해주세요,q를 입력할시 프로그램이 종료됩니다.")
+  if num=='q':
+    break
+  if len(num)!=14:
+    print("주민번호가 너무 길거나 짧습니다.")
+    continue
+  if num[6:7]!="-":
+    print("하이픈을 입력해주세요")
+    continue
+  sex=int(num[7:8])
+  if sex%2==1:
+    print("남")
+  else:
+    print("여")
